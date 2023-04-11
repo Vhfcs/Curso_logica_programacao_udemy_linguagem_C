@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1681226218 source:c:\udemy\ws-cb\teste_debug\main.c
+	<stdio.h>
+	<string.h>
+
