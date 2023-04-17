@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1681749402 source:c:\udemy\ws-cb\exercicio_retangulo\main.c
+	<stdio.h>
+	<math.h>
+

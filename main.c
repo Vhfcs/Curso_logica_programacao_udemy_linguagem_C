@@ -1,25 +1,23 @@
 #include <stdio.h>
-
+#include <math.h>
 
 int main()
 {
-    double largura, comprimento, valor, area, preco;
+    double base, altura, area, perimetro, diagonal;
 
-    printf("Digite a largura do terreno: ");
-    scanf("%lf", &largura);
+    printf("Base do retangulo: ");
+    scanf("%lf", &base);
 
-    printf("Digite o comprimento do terreno: ");
-    scanf("%lf", &comprimento);
+    printf("Altura do retangulo: ");
+    scanf("%lf", &altura);
 
-    printf("Digite o valor do metro quadrado: ");
-    scanf("%lf", &valor);
+    area = base * altura;
+    perimetro = 2 * base + 2 * altura;
+    diagonal = sqrt(base * base + altura * altura);
 
-    area = largura * comprimento;
-    preco = area * valor;
-
-    printf("Area do terreno = %.2lf\n", area);
-    printf("Preco do terreno = %.2lf\n", preco);
-
+    printf("AREA = %.4lf\n", area);
+    printf("pERIMETRO = %.4lf\n", perimetro);
+    printf("DIAGONAL = %.4lf\n", diagonal);
 
     return 0;
 }
