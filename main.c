@@ -3,21 +3,28 @@
 
 int main()
 {
-    double base, altura, area, perimetro, diagonal;
+    double a, b, c, delta, x1, x2;
 
-    printf("Base do retangulo: ");
-    scanf("%lf", &base);
+    printf("Coeficiente A: ");
+    scanf("%lf", &a);
 
-    printf("Altura do retangulo: ");
-    scanf("%lf", &altura);
+    printf("Coeficiente B: ");
+    scanf("%lf", &b);
 
-    area = base * altura;
-    perimetro = 2 * base + 2 * altura;
-    diagonal = sqrt(base * base + altura * altura);
+    printf("Coeficiente C: ");
+    scanf("%lf", &c);
 
-    printf("AREA = %.4lf\n", area);
-    printf("pERIMETRO = %.4lf\n", perimetro);
-    printf("DIAGONAL = %.4lf\n", diagonal);
+    delta = b * b - 4 * a * c;
 
+    if(a == 0 || delta < 0){
+        printf("Essa equacao nao possue raizes reais\n");
+
+    }
+    else{
+        x1 = (-b + sqrt(delta)) / (2 * a);
+        x2 = (-b - sqrt(delta)) / (2 * a);
+        printf("X1 = %.4lf\n", x1);
+        printf("X2 = %.4lf\n", x2);
+    }
     return 0;
 }
