@@ -1,26 +1,27 @@
 #include <stdio.h>
 
-
 int main()
 {
-    int a, b, c, menor;
+    int x, y, soma, troca;
 
-    printf("Primeiro valor: ");
-    scanf("%d", &a);
-    printf("Segundo valor: ");
-    scanf("%d", &b);
-    printf("Terceiro valor: ");
-    scanf("%d", &c);
+    printf("Digite dois numeros:\n");
+    scanf("%d", &x);
+    scanf("%d", &y);
 
-    if (a < b && a < c){
-        menor = a;
+    if(x > y){
+        troca = x;
+        x = y;
+        y = troca;
     }
-    else if (b < c){
-        menor = b;
+
+    soma = 0;
+    for(int i = x + 1; i < y; i++){
+        if(i % 2 != 0){
+            soma = soma + i;
+        }
+
     }
-    else {
-        menor = c;
-    }
-    printf("MENOR = %d\n", menor);
+    printf("Soma dos impares = %d\n", soma);
+
     return 0;
 }
